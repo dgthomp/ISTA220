@@ -1,0 +1,21 @@
+﻿<Page
+    x:Class="village.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:village"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Left" Margin="397,87,0,0" Text="village" TextWrapping="Wrap" VerticalAlignment="Top" Height="117" Width="346" FontSize="100" FontWeight="Bold" FontFamily="Arial Black" RenderTransformOrigin="0.496,0.545" SelectionChanged="TextBlock_SelectionChanged"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="386,321,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" Width="339" d:LayoutRounding="Auto" Height="73">
+            <PasswordBox.RenderTransform>
+                <CompositeTransform Rotation="-0.421"/>
+            </PasswordBox.RenderTransform>
+        </PasswordBox>
+        <TextBox HorizontalAlignment="Left" Height="64" Margin="397,233,0,0" Text="USERNAME" TextWrapping="Wrap" VerticalAlignment="Top" Width="309"/>
+        <Button x:Name="LOGIN" Content="Login" Height="30" Margin="469,441,0,0" VerticalAlignment="Top" Width="164"/>
+    </Grid>
+</Page>
