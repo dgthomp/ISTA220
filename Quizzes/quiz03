@@ -1,0 +1,54 @@
+using System;
+
+namespace quiz03exceptionHandling
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Reciprocal();//so user can re-enter different input without exiting console.
+        }
+
+        private static void Reciprocal()
+        {
+            Console.Write("To calculate the reciprocal of an integer, enter a positive integer: ");
+
+            try
+            {
+                string Number = Console.ReadLine();
+                float input = int.Parse(Number);
+                float reciprocal = 1 / input;
+                if (input < 0)
+                {
+                    throw new ArgumentOutOfRangeException();
+                }
+                if (input < 1)
+                {
+                    throw new DivideByZeroException();
+                }
+                else
+                    Console.WriteLine($"The reciprocal is {reciprocal}");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Input string was not in a correct format");
+                Reciprocal();
+            }
+            catch (DivideByZeroException)
+            {
+                Console.WriteLine("Attempted to divide by zero");
+                Reciprocal();
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                Console.WriteLine("Your number must be a positive number");
+                Reciprocal();
+            }
+
+            finally
+            {
+               
+            }
+        }
+    }
+}
